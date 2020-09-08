@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import NavigationComponent from './components/NavigationComponent';
+import ToolbarComponent from './components/ToolbarComponent';
 
 function App() {
   return (
@@ -19,6 +21,10 @@ function App() {
           Learn React
         </a>
       </header>
+      <main>
+        <ToolbarComponent />
+        <NavigationComponent />
+      </main>
     </div>
   );
 }

@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+/* Toolbar */
+.toolbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+  .toolbar__element {
+    display: flex;
+  }
+  .toolbar__title {
+    font-size: 20px;
+  }
+    .toolbar__icon {
+      margin: 0 12px;
+    }
+/* Bottom navigation */
+.bottom-nav {
+  width: 100%;
+}
+  .bottom-nav--fixed {
+    position: fixed;
+    bottom: 0;
+  }
+  .MuiSvgIcon-root {
+    height: 36px !important;
+  }
+/* Bottom navigation */

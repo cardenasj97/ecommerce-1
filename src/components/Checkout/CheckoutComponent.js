@@ -80,7 +80,7 @@ const CheckoutComponent = (props) => {
                                         <div>Size: M</div>
                                         <div>Quantity: {product.quantity}</div>
                                         <div>Unit: {formatMoney(product.price)}</div>
-                                        <div>Subtotal: {formatMoney(product.price) * product.quantity}</div>
+                                        <div>Subtotal: {formatMoney(product.price * product.quantity)}</div>
                                     </CardContent>
                                 </div>
                                 <CardMedia image={product.image[0].image} title={product.name} className="cart-product__image" />

@@ -90,6 +90,24 @@ const cartReducer = (state = initialState, action) => {
                     total: newTotal
                 }
             }
+        case 'PAY_ORDER':
+            const products = [...state.products];
+            const addedProductsId = [...state.addedProducts].map(product => product.id);
+            const modifiedProducts = products.filter(product => addedProductsId.indexOf(product.id) !== -1);
+            
+            modifiedProducts.map((mProduct) => {
+                mProduct.stock = mProduct.stock - state.addedProducts.find(aProduct => mProduct.id === aProduct.id).quantity;
+                return {
+                    ...mProduct
+                };
+            });
+
+            return {
+                ...state,
+                products: [...state.products],
+                addedProducts: [],
+                total: 0
+            }
         default:
             return state;
     }

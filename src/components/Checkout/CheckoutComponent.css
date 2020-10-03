@@ -20,3 +20,9 @@
 .step-one__text {
     padding: 16px;
 }
+.MuiStepIcon-completed, .MuiStepIcon-active {
+    color: #f06292 !important;
+}
+.MuiStepContent-root {
+    padding-right: 40px !important;
+}

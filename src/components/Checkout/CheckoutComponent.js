@@ -4,6 +4,8 @@ import ToolbarCheckoutComponent from '../Header/ToolbarCheckoutComponent';
 import './CheckoutComponent.css';
 import Stepper from '@material-ui/core/Stepper';
 import { connect } from 'react-redux';
+import { payOrder } from '../../actions/cartActions';
+import { formatMoney } from '../../utils/priceFormatter';
 
 const getSteps = () => {
     return ['Welcome!', 'Personal information', 'Shipping information', 'Checkout and order reception', 'Payment information'];
@@ -13,6 +15,7 @@ const CheckoutComponent = (props) => {
     const [activeStep, setActiveStep] = useState(0);
     const [paymentMethod, setPaymentMethod] = useState(null);
     const steps = getSteps();
+    const orderTotal = formatMoney(props.total);
 
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -26,12 +29,16 @@ const CheckoutComponent = (props) => {
         setPaymentMethod(event.target.value);
     };
     
+    const handlePay = () => {
+        props.payOrder();
+    };
+
     const getStepContent = (step) => {
         switch (step) {
             case 0:
                 return (
                     <React.Fragment>
-                        <div className="step-one__text">Hola! Bienvenido a mi tienda, por favor antes de pagar déjame saber tus datos para el envío de los productos. Gracias!</div>
+                        <div className="step-one__text">Hello! Welcome to my digital store, please fill the following forms to finish the checkout. Thank you!</div>
                         <Button variant="contained" className="button--styling__1 checkout__button" onClick={handleNext}>Agree</Button>
                     </React.Fragment>
                 );
@@ -72,8 +79,8 @@ const CheckoutComponent = (props) => {
                                         <div>SKU: {product.id}</div>
                                         <div>Size: M</div>
                                         <div>Quantity: {product.quantity}</div>
-                                        <div>Unit: {product.price}</div>
-                                        <div>Subtotal: {product.price * product.quantity}</div>
+                                        <div>Unit: {formatMoney(product.price)}</div>
+                                        <div>Subtotal: {formatMoney(product.price) * product.quantity}</div>
                                     </CardContent>
                                 </div>
                                 <CardMedia image={product.image[0].image} title={product.name} className="cart-product__image" />
@@ -89,10 +96,10 @@ const CheckoutComponent = (props) => {
                         <FormControl>
                             <RadioGroup aria-label="payment-method" name="payment-method" value={paymentMethod} onChange={handleChangePaymentMethod}>
                                 <FormControlLabel value="cash" control={<Radio />} label="Cash" />
-                                <FormControlLabel value="credit-card" control={<Radio />} label="Credit Card" />
+                                {/* <FormControlLabel value="credit-card" control={<Radio />} label="Credit Card" /> */}
                             </RadioGroup>
                         </FormControl>
-                        {paymentMethod ? <Button variant="contained" className="button--styling__1 checkout__button" onClick={handleNext}>Continue</Button> : null}
+                        {paymentMethod ? <Button variant="contained" className="button--styling__1 checkout__button" onClick={handlePay}>Pay now ${orderTotal}</Button> : null}
                         <Button variant="outlined" className="button--styling__2 checkout__button" onClick={handleBack}>Back to previous step</Button>
                     </div>
                 );
@@ -126,8 +133,15 @@ const CheckoutComponent = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        addedProducts: state.addedProducts
+        addedProducts: state.addedProducts,
+        total: state.total
     };
 };
 
-export default connect(mapStateToProps)(CheckoutComponent);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        payOrder: () => {dispatch(payOrder())}
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(CheckoutComponent);

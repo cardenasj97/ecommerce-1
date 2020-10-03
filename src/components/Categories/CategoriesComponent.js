@@ -11,7 +11,9 @@ const Categories = (props) => {
                 <div className="content">
                     <h2>Categories</h2>
                     {props.categories.map((category, index) => (
-                        <div key={index}>{category.name}</div>
+                        <div key={index}>
+                            <img src={category.image} alt={category.name} />
+                        </div>
                     ))}
                 </div>
             </div>

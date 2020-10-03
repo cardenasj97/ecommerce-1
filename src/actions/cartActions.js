@@ -16,7 +16,7 @@ export const addQuantity = (id) => {
     return {
         type: 'ADD_QUANTITY',
         id
-    }
+    };
 };
 
 export const subtractQuantity = (id) => {
@@ -24,4 +24,10 @@ export const subtractQuantity = (id) => {
         type: 'SUBTRACT_QUANTITY',
         id
     }
+};
+
+export const payOrder = () => {
+    return {
+        type: 'PAY_ORDER'
+    };
 };

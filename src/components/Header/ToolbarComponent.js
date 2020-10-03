@@ -15,11 +15,11 @@ const ToolbarComponent = () => {
         <AppBarStyled position="fixed">
             <Toolbar variant="dense" className="toolbar">
                 <div className="toolbar__element toolbar__title">
-                    Juan Cardenas
+                    Juan Cardenas Store
                 </div>
                 <div className="toolbar__element">
-                    <PhoneIcon className="toolbar__icon" />
-                    <ExitToAppIcon className="toolbar__icon" />
+                    <PhoneIcon className="toolbar__icon" titleAccess="Call customer support" />
+                    <ExitToAppIcon className="toolbar__icon" titleAccess="Sign out" />
                 </div>
             </Toolbar>
         </AppBarStyled>

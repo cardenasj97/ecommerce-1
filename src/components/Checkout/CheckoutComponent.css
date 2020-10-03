@@ -1,0 +1,28 @@
+.checkout {
+    height: 100%;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1300;
+}
+    .checkout__button {
+        border-radius: 2px !important;
+        margin: 6px 0 !important;
+        width: 100%;
+    }
+    .checkout__text-input {
+        margin-bottom: 15px !important;
+    }
+    .checkout--bg {
+        background-color: #fff;
+    }
+.step-one__text {
+    padding: 16px;
+}
+.MuiStepIcon-completed, .MuiStepIcon-active {
+    color: #f06292 !important;
+}
+.MuiStepContent-root {
+    padding-right: 40px !important;
+}

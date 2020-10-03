@@ -1,0 +1,149 @@
+{
+    "categories": [
+        {
+            "id": "8",
+            "name": "Ropa interior",
+            "image": "https://api.tissini.app/img/categories/ropa-interior-prominent.jpg"
+        },
+        {
+            "id": "428",
+            "name": "Seamless",
+            "image": "https://api.tissini.app/img/categories/seamless-prominent.jpg"
+        },
+        {
+            "id": "429",
+            "name": "Tapabocas",
+            "image": "https://api.tissini.app/img/categories/tapabocas-prominent.jpg"
+        }
+    ],
+    "products": [
+        {
+            "id": "808559",
+            "name": "Faja Cony",
+            "price": 49.95,
+            "category": "8",
+            "stock": 25,
+            "image": [
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/808559_0.jpg"
+                },
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/808559_1.jpg"
+                },
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/808559_2.jpg"
+                },
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/808559_3.jpg"
+                }
+            ]
+        },
+        {
+            "id": "708028",
+            "name": "Faja Heidi Cocoa",
+            "price": 75.95,
+            "category": "8",
+            "stock": 25,
+            "image": [
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/708028_0.jpg"
+                },
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/708028_1.jpg"
+                },
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/708028_2.jpg"
+                },
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/708028_3.jpg"
+                }
+            ]
+        },
+        {
+            "id": "802009",
+            "name": "Jean Oriana",
+            "price": 59.95,
+            "category": "8",
+            "stock": 25,
+            "image": [
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/jeans/802009_0.jpg"
+                },
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/jeans/802009_1.jpg"
+                },
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/jeans/802009_2.jpg"
+                },
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/jeans/802009_3.jpg"
+                }
+            ]
+        },
+        {
+            "id": "8085591",
+            "name": "Faja Heidy",
+            "price": 49.95,
+            "category": "8",
+            "stock": 25,
+            "image": [
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/808559_0.jpg"
+                },
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/808559_1.jpg"
+                },
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/808559_2.jpg"
+                },
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/808559_3.jpg"
+                }
+            ]
+        },
+        {
+            "id": "2903-168",
+            "name": "Faja Flavia Negro",
+            "price": 39.95,
+            "category": "8",
+            "stock": 25,
+            "image": [
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/2903-168_0.jpg"
+                },
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/2903-168_1.jpg"
+                },
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/2903-168_2.jpg"
+                },
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/2903-168_3.jpg"
+                }
+            ]
+        },
+        {
+            "id": "2903-169",
+            "name": "Faja Elen",
+            "price": 64.95,
+            "category": "8",
+            "stock": 25,
+            "image": [
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/2903-169_0.jpg"
+                },
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/2903-169_1.jpg"
+                },
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/2903-169_2.jpg"
+                },
+                {
+                    "image": "https://api.tissini.app/img/products/textiles/fajas/2903-169_3.jpg"
+                }
+            ]
+        }
+    ],
+    "addedProducts": [],
+    "total": 0
+}

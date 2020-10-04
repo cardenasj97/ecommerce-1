@@ -1,12 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import NavigationComponent from '../Footer/NavigationComponent';
-import ToolbarComponent from '../Header/ToolbarComponent';
 
 const Categories = (props) => {
     return (
         <React.Fragment>
-            <ToolbarComponent />
             <div className="layout">
                 <div className="content">
                     <h2>Categories</h2>
@@ -17,7 +14,6 @@ const Categories = (props) => {
                     ))}
                 </div>
             </div>
-            <NavigationComponent />
         </React.Fragment>
     );
 };

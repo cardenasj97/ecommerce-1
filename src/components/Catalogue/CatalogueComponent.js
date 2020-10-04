@@ -4,8 +4,6 @@ import './CatalogueComponent.css';
 import { Card, Button } from '@material-ui/core';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import { addToCart } from '../../actions/cartActions';
-import ToolbarComponent from '../Header/ToolbarComponent';
-import NavigationComponent from '../Footer/NavigationComponent';
 
 const Catalogue = (props) => {
     const handleClick = (id) => {
@@ -14,7 +12,6 @@ const Catalogue = (props) => {
 
     return (
         <React.Fragment>
-            <ToolbarComponent />
             <div className="layout">
                 <div className="content">
                     <h2>Products</h2>
@@ -36,7 +33,6 @@ const Catalogue = (props) => {
                     ))}
                 </div>
             </div>
-            <NavigationComponent />
         </React.Fragment>
     );
 };

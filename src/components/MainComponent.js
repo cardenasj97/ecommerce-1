@@ -3,13 +3,13 @@ import Categories from './Categories/CategoriesComponent';
 import Catalogue from './Catalogue/CatalogueComponent';
 import Cart from './Cart/CartComponent';
 import { Route, Switch, Redirect } from 'react-router-dom';
-// import ToolbarComponent from './Header/ToolbarComponent';
-// import NavigationComponent from './Footer/NavigationComponent';
+import ToolbarComponent from './Header/ToolbarComponent';
+import NavigationComponent from './Footer/NavigationComponent';
 
 const Main = () => {
     return (
         <main className="main">
-            {/* <ToolbarComponent /> */}
+            <ToolbarComponent />
             <Switch>
                 <Route path="/categories" component={Categories} />
                 {/* <Route exact path="/catalogue" render={() => <Redirect to="/categories" /> } /> */}
@@ -17,7 +17,7 @@ const Main = () => {
                 <Route path="/cart" component={Cart} />
                 <Route exact path="/" render={() => <Redirect to="/categories" /> } />
             </Switch>
-            {/* <NavigationComponent /> */}
+            <NavigationComponent />
         </main>
     );
 };

@@ -6,8 +6,6 @@ import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import { addQuantity, removeFromCart, subtractQuantity } from '../../actions/cartActions';
 import { formatMoney } from '../../utils/priceFormatter';
 import CheckoutComponent from '../Checkout/CheckoutComponent';
-import ToolbarComponent from '../Header/ToolbarComponent';
-import NavigationComponent from '../Footer/NavigationComponent';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 const Cart = (props) => {
@@ -33,7 +31,6 @@ const Cart = (props) => {
     const ShoppingCart = () => (
         <React.Fragment>
             <div>
-                <ToolbarComponent />
                 <div className="layout">
                     <div className="content cart-content--padding">
                         <h2>Cart</h2>
@@ -71,7 +68,6 @@ const Cart = (props) => {
                         </Button>
                     </div>
                 </div>
-                <NavigationComponent />
             </div>
             <CheckoutComponent checked={renderCheckout} onClickRenderCheckout={handleClickRenderCheckout} />
         </React.Fragment>
@@ -79,14 +75,12 @@ const Cart = (props) => {
 
     const EmptyCart = () => (
         <React.Fragment>
-            <ToolbarComponent />
-                <div className="layout">
-                    <div className="content">
-                        <h2>Cart</h2>
-                        <p>Please, add a product to your cart.</p>
-                    </div>
+            <div className="layout">
+                <div className="content">
+                    <h2>Cart</h2>
+                    <p>Please, add a product to your cart.</p>
                 </div>
-            <NavigationComponent />
+            </div>
         </React.Fragment>
     );
 
